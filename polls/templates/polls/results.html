@@ -1,0 +1,12 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/results.css' %}" />
+
+<h1>{{ question.question_text }}</h1>
+<div class = "graph">
+    <h2> Results</h2>
+{% for choice in question.choice_set.all %}
+        <div style="height: 13%; margin-top: 10px; width:{{ choice.votes }}0%;" class="{{ choice.choice_text }}"/><br/>
+        {{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
+    </div>
+{% endfor %} 

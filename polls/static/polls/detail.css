@@ -1,0 +1,56 @@
+@import
+url('http://fonts.googleapis.com/css?family=Amarante');
+
+
+body {
+	font-family: Helvetica;
+	text-align: center;
+}
+
+
+.col-xs-6 {
+
+}
+
+
+label, input {
+	display: block;
+	cursor: pointer;
+	margin: auto;
+	width: 8%;
+	height: 7%;
+	font-size: 40px;
+}
+
+#choice1 {
+	background-color: #EF476F;
+}
+
+
+#choice2 {
+	background-color: #F79256;
+}
+ 
+#choice3 {
+	background-color: #128691;
+}
+
+#choice4 {
+	background-color: #F7D24C;
+}
+
+#choice5 {
+	background-color: #316B9E;
+}
+
+#Submit {
+	background-color: #CCCCCC;
+
+}
+
+#submitbutton {
+	background: none;
+	border: none;
+	font-size: 40px;
+    width: 100%;
+}

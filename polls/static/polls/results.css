@@ -1,0 +1,50 @@
+@import
+url('http://fonts.googleapis.com/css?family=Amarante');
+
+h1, h2{
+    text-align: center;
+}
+
+body {
+	font-family: Helvetica;
+	text-align: left;
+}
+
+
+.graph {
+    width: 99%;
+    height: 65%;
+    border: 5px solid #aeaeae;
+    background-color: #eaeaea;
+}
+.bar {
+    width: 20px;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+    background-color: #aeaeae;
+    vertical-align: baseline;
+}
+
+.A {
+	background-color: #EF476F;
+}
+
+
+.B {
+	background-color: #F79256;
+}
+ 
+.C {
+	background-color: #128691;
+}
+
+.D {
+	background-color: #F7D24C;
+}
+
+.E {
+	background-color: #316B9E;
+}
+
+

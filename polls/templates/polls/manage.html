@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+   <title>weClick - Administrator Page</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'polls/admin.css' %}" />
+   <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+   
+</head>
+<body>
+	<div id="main">
+		<h1>weClick</h1>
+		<div id="controls">
+			<h2>00:00:00</h2>
+			<br>
+			<input type="button" id="start" value="START" onclick="location.href='http://google.com';"/>
+			<br><br>
+			<p><em>Press the Start button to begin the survey</em></p>
+			<br>
+			<p><em>Press the Stop button to stop receiving answers</em></p>
+			<br>
+			<h2 id="responses">Responses:0<h2>
+			<br>
+			<input type="button" id="results" value="Show Results" onclick="location.href='/2/results';"/>
+			<br /><br />
+			<input type="button" value="Edit Question" id="helpbtn" onclick="location.href='/2';"/>
+			<br /><br />
+			<input type="button" value="Help" id="helpbtn" onclick="location.href='/help';"/>
+		</div>	
+	</div>
+		
+</body>
+</html>
