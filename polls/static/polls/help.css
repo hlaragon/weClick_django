@@ -60,6 +60,12 @@ h2 {
 }
 
 /*This part is for the Help page */
+
+a, a:visited {
+	color: green;
+	text-decoration: none;
+}
+
 #desc {
 	font-size: 39px;
 	color: green;

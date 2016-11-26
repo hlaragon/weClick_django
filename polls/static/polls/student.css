@@ -1,0 +1,99 @@
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+
+}
+
+/*.row {
+	height: 30%;
+}
+*/
+.col-xs-6 {
+	height: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	
+}
+
+.radio {
+	margin: 0 !important;
+
+}
+
+
+input {
+	visibility: hidden;
+}
+
+label {
+	margin-top: 15%;
+	cursor: pointer;
+	width: 60%;
+	height: 60%;
+	font-size: 40px;	
+}
+
+#A {
+	background-color: #EF476F;
+}
+
+#B {
+	background-color: #F79256;
+}
+ 
+#C {
+	background-color: #128691;
+}
+
+#D {
+	background-color: #F7D24C;
+}
+
+#E {
+	background-color: #316B9E;
+}
+
+#A.checked, #B.checked, #C.checked, #D.checked, #E.checked {
+	background-color: #FFF;
+}
+
+#Submit {
+	background-color: #CCCCCC;
+}
+
+input[type=radio]:checked + label {
+	font-size: 60px;
+}
+
+#submitbutton {
+	background: none;
+	border: none;
+	font-size: 30px;
+	color: black;
+}
+
+.navbar {
+  background-color: #F7D24C;
+  margin-bottom: 0 !important;
+}
+
+.navbar a {
+  color: #000000;
+}
+
+#brandName {
+  font-size: 25px;
+}
+
+.navbar a:hover {
+    background-color: #F7D24C;
+    color: #000000 ;  
+}

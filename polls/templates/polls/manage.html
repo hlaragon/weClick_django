@@ -1,35 +1,81 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-   <title>weClick - Administrator Page</title>
-   <link rel="stylesheet" type="text/css" href="{% static 'polls/admin.css' %}" />
-   <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+	<title>Admin</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="multiple-choice"/>
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script>
+ 	 // Initialize Firebase
+  	var config = {
+    	apiKey: "AIzaSyCbAgiS2GHz_1fvasyFqTxoRxT5vLWotTA",
+    	authDomain: "weclicker.firebaseapp.com",
+    	databaseURL: "https://weclicker.firebaseio.com",
+    	storageBucket: "",
+    	messagingSenderId: "790459566642"
+  	};
+  	firebase.initializeApp(config);
+	</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="{% static 'polls/chart.js' %}" async></script>
+	<script type="text/javascript" src="{% static 'polls/manage.js' %}" async></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/manage.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
    
 </head>
 <body>
-	<div id="main">
-		<h1>weClick</h1>
-		<div id="controls">
-			<h2>00:00:00</h2>
-			<br>
-			<input type="button" id="start" value="START" onclick="location.href='http://google.com';"/>
-			<br><br>
-			<p><em>Press the Start button to begin the survey</em></p>
-			<br>
-			<p><em>Press the Stop button to stop receiving answers</em></p>
-			<br>
-			<h2 id="responses">Responses:0<h2>
-			<br>
-			<input type="button" id="results" value="Show Results" onclick="location.href='/2/results';"/>
-			<br /><br />
-			<input type="button" value="Edit Question" id="helpbtn" onclick="location.href='/2';"/>
-			<br /><br />
-			<input type="button" value="Help" id="helpbtn" onclick="location.href='/help';"/>
+
+	<nav class="navbar">
+  		<div class="container-fluid">
+    	<div class="navbar-header">
+      		<a class="navbar-brand" id="brandName" href="/">WeClicker</a>
+    	</div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+	      <li><a href="#" id="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+	    </ul>
+	  	</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-md-6 col-xs-12">
+				<div id="controls">
+					<br>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span><h2 id="min">00</h2><h2>:</h2><h2 id="sec">00</h2>
+					<br><br>
+					<input type="button" id="startButton" class="btn btn-circle btn-xl" value="Start" ></button>
+					<br><br><br>
+					<p><em>Press the Start button to begin the survey</em></p>
+					<p><em>Press the Stop button to stop receiving answers</em></p>
+					<br>
+					<br>
+					<button type="button" id="resultsButton" class="btn btn-lg">Show Results</button>
+					<button type="button" id="resetButton" class="btn btn-lg">Reset</button>
+				
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<br><br><br><br>
+				<canvas id="myChart"></canvas>
+			</div>
+
 		</div>	
+		</div>
+
+
+
 	</div>
-		
+	
+
 </body>
 </html>

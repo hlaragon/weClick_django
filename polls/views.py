@@ -63,3 +63,6 @@ def help(request):
     
 def manage(request):
     return render(request, 'polls/manage.html', {})
+    
+def student(request):
+    return render(request, 'polls/student.html', {})

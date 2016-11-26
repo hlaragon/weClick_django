@@ -3,11 +3,11 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.8.3.min.js"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>weClick</title>
 </head>
 
@@ -15,39 +15,31 @@
 	<div class="page-header">
 		<div id="title">
 			<a href="/">weClick</a>
-		</div>
-		 
+		</div> 
 	</div>
 	
+	
 	<div class="content-body">
-		<div class="content container">
-			<div class="row">
-				<div class="col-md-12">
+
+					
+					
 			
 					{% block content %}			
 
-
-
-					{% if latest_question_list %}
     				<ul>
+						<!--- Removed temporarily
 						<li><a href="/login">Admin</a></li>
-    					{% for question in latest_question_list %}
-						<li><a href="{% url 'polls:detail' question.id %}">Student</a></li>
-    					{% endfor %}
+						-->
+						<li><a href="/manage">Admin</a></li>
+						<li><a href="/student">Student</a></li>
 						<li><a href="/help">Help</a></li>
     				</ul>
-					{% else %}
-    				<p>No polls are available.</p>
-					{% endif %}
 
-
-    
     				{% endblock %}
 
 
-				</div>
-			</div>
-		</div>
+
+		
 	</div>
 </body>
 

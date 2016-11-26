@@ -4,19 +4,22 @@ a:visited {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 body, a {
   font-family: 'BioRhyme', serif;
   font-size: 24px;
   text-align: center;
+  background-image: url("weClicker.JPG");
+  background-position: right bottom; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .page-header {
     margin-top: 0;
-    padding: 20px 20px 20px 50px;
-	text-align: center;
-	font-family: 'BioRhyme', serif;
+
 	color: green;
 
 }
