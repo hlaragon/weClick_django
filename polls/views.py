@@ -4,6 +4,8 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
 from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 from .models import Choice, Question
 
@@ -34,7 +36,6 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
-    
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -60,9 +61,15 @@ def results(request, question_id):
     
 def help(request):
     return render(request, 'polls/help.html', {})
-    
+
+@login_required(login_url='/login/')
 def manage(request):
     return render(request, 'polls/manage.html', {})
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
     
 def student(request):
     return render(request, 'polls/student.html', {})
+    

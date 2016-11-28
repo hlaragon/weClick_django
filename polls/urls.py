@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^help/$', views.help, name='help'),
     url(r'^manage/$', views.manage, name='manage'),
     url(r'^login/$', auth_views.login, name='login'),
+    url(r'^registration/login/$', auth_views.login),
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^admin/', admin.site.urls),
     
